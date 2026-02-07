@@ -1,16 +1,43 @@
-# React + Vite
+Setup
+Install dependencies: npm install
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Launch development mode: npm run dev
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+How to add a new tutorial?
+Step 1: Export and Clean the HTML
+Export the source code from Guidde and apply the following cleaning rules to ensure a professional look:
 
-## React Compiler
+1-Remove the "Introduction" block: Delete the generic intro text and the first image associated with it.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2-Simplify Content: Remove all paragraph <p> tags within the steps. Keep only the <h3> titles and the <img> tags.
 
-## Expanding the ESLint configuration
+3-Remove Branding: Delete the "Powered by Guidde" attribution and any external marketing links.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4-Translate all titles and button descriptions into French.
+
+5-Fix Indexing: Ensure step numbers (1., 2., etc.) are decremented correctly after removing the introduction.
+
+Example of code to REMOVE (Introduction block):
+
+HTML
+<h3>1. Introduction</h3>
+<div><p>Ce guide vous accompagnera...</p></div>
+<img src="..." alt="Introduction" />
+Step 2: Add the File
+Place the cleaned HTML file into: /public/tutoriels/
+
+Step 3: Register the Data
+Add a new object to the estoriomTutorials array in src/data/tutorials.js:
+
+JavaScript
+{ 
+  id: "31",                      --> Unique ID (next sequential number)
+  title: "Nom du Tutoriel",      --> Name shown in the sidebar
+  file: "filename.html",         --> Exact filename in /public/tutoriels/
+  category: "Ventes"             --> Category (see list below)
+},
+Organizational Categories
+Please use these existing categories to keep the documentation organized:
+
+Produits, Ventes, Contacts, Finances, Achats, Stocks, Rapports, Paramètres.
