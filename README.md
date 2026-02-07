@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Setup
 Install dependencies: npm install
 
@@ -41,3 +42,6 @@ Organizational Categories
 Please use these existing categories to keep the documentation organized:
 
 Produits, Ventes, Contacts, Finances, Achats, Stocks, Rapports, Paramètres.
+=======
+
+>>>>>>> 77a0ee1a7c925ff364b8cedcf2aa0d044cddd7e7
